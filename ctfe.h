@@ -8,6 +8,7 @@
 
 using namespace std;
 
+enum tokentype;
 typedef vector<token> tokens;
 void CreateSetOfDelimiters();
 void CreateTokensFromExpression(string &expr, tokens &texpr);
