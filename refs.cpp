@@ -1,3 +1,6 @@
+#include "refs.h" 
+
+
 typedef map<string, double> Variables;
 
 typedef map<string, vector<double> > Massives;
