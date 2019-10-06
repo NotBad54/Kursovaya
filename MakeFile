@@ -2,7 +2,7 @@
  CFLAGS=-c -Wall -Werror -std=c++11
  SOURCES=main.cpp
  OBJECTS=$(SOURCES:*.cpp=*.o)
- EXECUTABLE=geometry.exe
+ EXECUTABLE=calculator.exe
 
  all: $(SOURCES) $(EXECUTABLE)
 	
