@@ -1,14 +1,8 @@
-﻿#include "refs.h"
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-#include <iterator>
-#include <fstream>
-#include <map>
-#include <cmath>
-#include <set>
-#include <stack>
+﻿#include "stdafx.h"
+#include "refs.h"
+#include "tokens.h"
+#include "postfix.h"
+#include "result.h"
 
 
 
