@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #pragma once
 #ifndef _RESULT_H
 #define _RESULT_H
@@ -16,7 +15,4 @@ void CreateOps();
 double ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas);
 
 #endif
-||||||| merged common ancestors
-=======
 
->>>>>>> a882ad8304e92e551b298df7da2975c9e09bf58c
