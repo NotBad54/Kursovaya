@@ -19,7 +19,7 @@ void CreatePostfixFromTokens(tokens &texpr, tokens &pexpr) {
 	
 	CreatePrior();
 	stack <token> TStack;
-	for (int i = 0; i < texpr.size(); i++) {
+	for (size_t i = 0; i < texpr.size(); i++) {
 		switch (texpr[i].type) {
 		case var:
 		case num:

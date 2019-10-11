@@ -26,7 +26,7 @@ double ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas) {
 CreateOps(); 
 stack <double> s; 
 
-for (int i = 0; i < pexpr.size(); i++) { 
+for (size_t i = 0; i < pexpr.size(); i++) { 
 switch (pexpr[i].type) { 
 case num: { 
 s.push(atoi(pexpr[i].name.c_str())); 

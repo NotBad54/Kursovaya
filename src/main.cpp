@@ -4,19 +4,16 @@
 #include "postfix.h"
 #include "result.h"
 
-
-
 using namespace std;
 
+tokens texpr, pexpr;
+Variables expvars;
+Massives expmasvars;
+string expr;
+ifstream file("test.txt");
 
 int main()
 {
-tokens texpr, pexpr;
-	Variables expvars;
-	Massives expmasvars;
-	string expr;
-	ifstream file("test.txt");
-
 	ReadExpressionFromStream(file, expr, expvars, expmasvars);
 
 	cout << "Expr:" << endl;

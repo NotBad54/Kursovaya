@@ -27,4 +27,4 @@ double op_asin(stack <double> &s);
 double op_acos(stack <double> &s);
 double op_atan(stack <double> &s);
 
-#endif;
+#endif
