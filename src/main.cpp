@@ -26,7 +26,7 @@ int main()
 	Massives::iterator it1;
 	for (it1 = expmasvars.begin(); it1 != expmasvars.end(); it1++) {
 		cout << it1->first << '{';
-		for (int i = 0; i < it1->second.size(); i++) {
+		for (size_t i = 0; i < it1->second.size(); i++) {
 			if (i == it1->second.size() - 1)
 				cout << it1->second[i];
 			else

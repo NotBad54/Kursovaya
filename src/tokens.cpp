@@ -2,7 +2,7 @@
 
 
 void CreateSetOfDelimiters() {
-	for (int i = 0; i < delimiters.size(); i++)
+	for (size_t i = 0; i < delimiters.size(); i++)
 		DelimSet.insert(delimiters[i]);
 }
 
@@ -18,7 +18,7 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
 	string name;
 
 
-	int i = 0;
+	size_t i = 0;
 	while (i < ex.size() - 1) {
 		name = "";
 
@@ -40,7 +40,7 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
 		texpr.push_back(token(name, var));
 	}
 
-	for (int j = 0; j < texpr.size(); j++) {
+	for (size_t j = 0; j < texpr.size(); j++) {
 		if (texpr[j].name[0] == '[') {
 			texpr[j].type = op_sbr;
 			continue;
@@ -79,7 +79,7 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
 	}
 
 
-	for (int j = 0; j < texpr.size(); j++) {
+	for (size_t j = 0; j < texpr.size(); j++) {
 		if (texpr[j].name == "-" && (j == 0 || texpr[j - 1].type == op_br))
 			texpr[j].name = "opposite";
 		if (texpr[j].name == "!" && (j == texpr.size() - 1 || texpr[j + 1].type == cl_br || texpr[j + 1].type == op))

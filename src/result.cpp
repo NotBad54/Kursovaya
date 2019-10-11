@@ -66,8 +66,8 @@ if (it->first == pexpr[i].name)
 s.push(it->second[index]); 
 } 
 } 
-} 
-} 
-
+default: break;
+}
+}
 return s.top(); 
 }
