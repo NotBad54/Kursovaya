@@ -17,7 +17,7 @@ build/%.o : src/%.cpp
 
 .PHONY : clean
 clean:
-	rm -f build/*.o build/*.d bin/*.out
+	rm -f build/*.o bin/*.out
 
 .PHONY : test
 test : $(TEST_SOURCES) $(TEST_EXECUTABLE)
