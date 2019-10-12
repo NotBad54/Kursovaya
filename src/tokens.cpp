@@ -19,7 +19,7 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
 
 
 	size_t i = 0;
-	while (i < ex.size() - 1) {
+	while (i < ex.size()- 1) {
 		name = "";
 
 		if (IsDelimiter(ex[i])) {
@@ -66,7 +66,7 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
 		if (isalpha(texpr[j].name[0])) {
 			if (j < texpr.size() - 1 && texpr[j + 1].name[0] == '[')
 				texpr[j].type = mas;
-			//continue;
+			continue;
 		}
 
 		if (isalpha(texpr[j].name[0])) {

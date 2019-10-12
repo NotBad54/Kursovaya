@@ -12,7 +12,7 @@ typedef map<string, func_type> Ops;
 static Ops ops;
 
 void CreateOps();
-double ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas);
+void ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas);
 
 #endif
 

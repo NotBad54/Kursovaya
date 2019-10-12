@@ -37,5 +37,4 @@ void ReadExpressionFromStream(ifstream &inp, string &expr, Variables &var, Massi
 			} while (pos2 > 0);
 		}
 	}
-	return;
 }

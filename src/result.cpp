@@ -22,7 +22,7 @@ ops["atan"] = op_atan;
 return; 
 } 
 
-double ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas) { 
+void ResultExpr(tokens &pexpr, Variables &expvars, Massives &varmas) { 
 CreateOps(); 
 stack <double> s; 
 
@@ -69,5 +69,6 @@ s.push(it->second[index]);
 default: break;
 }
 }
-return s.top(); 
+cout<<s.top()<<endl;
+s = stack <double>();
 }

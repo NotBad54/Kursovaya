@@ -1,6 +1,6 @@
 CC = g++
 EXECUTABLE = bin/main.out
-CFLAGS = -Wall -c -std=c++11
+CFLAGS = -Wall -Werror -c -std=c++11
 SOURCES = $(wildcard src/*.cpp)
 OBJECTS = $(patsubst src/%.cpp, build/%.o, $(wildcard src/*.cpp))
 TEST_SOURCES = $(wildcard $(addprefix test/, *.cpp))

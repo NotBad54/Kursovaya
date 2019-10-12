@@ -10,11 +10,11 @@ tokens texpr, pexpr;
 Variables expvars;
 Massives expmasvars;
 string expr;
-ifstream file("test.txt");
+ifstream file("../Kursovaya/src/test.txt");
 
-int main()
-{
+int main() {
 	ReadExpressionFromStream(file, expr, expvars, expmasvars);
+	file.close();
 
 	cout << "Expr:" << endl;
 	cout << expr << endl;
@@ -36,8 +36,20 @@ int main()
 	}
 	cout << endl;
 
-	cout << ResultExpr(pexpr, expvars, expmasvars) << endl;
 
-	system("PAUSE");
+	CreateTokensFromExpression(expr, texpr);
+
+	CreatePostfixFromTokens(texpr, pexpr);
+
+	cout << "Result:" << endl;
+	ResultExpr(pexpr, expvars, expmasvars);
+
+
+	texpr.clear();
+	pexpr.clear();
+	expvars.clear();
+	expmasvars.clear();
+	expr.clear();
+
 	return 0;
 }

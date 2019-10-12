@@ -86,4 +86,5 @@ void CreatePostfixFromTokens(tokens &texpr, tokens &pexpr) {
 	}
 
 	return;
+	TStack = stack <token>();
 }
