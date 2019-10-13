@@ -12,8 +12,7 @@ Massives expmasvars;
 string expr;
 ifstream file("../Kursovaya/test/test.h");
 
-int main()
-{
+int main() {
     ReadExpressionFromStream(file, expr, expvars, expmasvars);
     file.close();
 
@@ -21,16 +20,13 @@ int main()
     cout << expr << endl;
 
     Variables::iterator it;
-    for (it = expvars.begin(); it != expvars.end(); it++)
-    {
+    for (it = expvars.begin(); it != expvars.end(); it++) {
         cout << it->first << '=' << it->second << endl;
     }
     Massives::iterator it1;
-    for (it1 = expmasvars.begin(); it1 != expmasvars.end(); it1++) 
-    {
+    for (it1 = expmasvars.begin(); it1 != expmasvars.end(); it1++) {
         cout << it1->first << '{';
-        for (size_t i = 0; i < it1->second.size(); i++) 
-        {
+        for (size_t i = 0; i < it1->second.size(); i++) {
             if (i == it1->second.size() - 1) {
                 cout << it1->second[i];
             }
