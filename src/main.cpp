@@ -12,7 +12,7 @@ Massives expmasvars;
 string expr;
 ifstream file("../Kursovaya/test/test.h");
 
-int main() 
+int main()
 {
     ReadExpressionFromStream(file, expr, expvars, expmasvars);
     file.close();
