@@ -4,7 +4,6 @@
 #include "result.h"
 #include "stdafx.h"
 
-
 using namespace std;
 
 tokens texpr, pexpr;
