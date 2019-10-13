@@ -1,12 +1,29 @@
 language: 
   - cpp
 
+
 compiler: g++
+
 
 dist: xenial
 
+
+before_install:
+- lsb_release -c
+- lsb_release -r
+- sudo apt-add-repository 'deb http://archive.ubuntu.com/ubuntu vivid main universe multiverse restricted'
+- sudo apt-add-repository 'deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse restricted'
+- sudo apt-key update
+- sudo apt-get -y update
+
+
+install:
+- sudo apt-get --no-install-recommends -y install cxxtest;
+- sudo find / -type f -name "cxxtestgen*"- sudo ln /usr/share/cxxtest/cxxtest/cxxtestgen.py /usr/bin/cxxtestgen.py
+- sudo find / -type f -name "cxxtestgen*"- echo $PATH
+
+
 script:
 - make
-- ./bin/main.out
 - make test
 - git ls-files src/ | xargs clang-format -i && git diff —exit-code
