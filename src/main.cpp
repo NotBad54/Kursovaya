@@ -1,8 +1,8 @@
 ﻿#include "refs.h"
-#include "tokens.h"
 #include "postfix.h"
 #include "result.h"
 #include "stdafx.h"
+#include "tokens.h"
 
 using namespace std;
 
@@ -12,7 +12,8 @@ Massives expmasvars;
 string expr;
 ifstream file("../Kursovaya/test/test.h");
 
-int main() {
+int main()
+{
     ReadExpressionFromStream(file, expr, expvars, expmasvars);
     file.close();
 
@@ -29,10 +30,9 @@ int main() {
         for (size_t i = 0; i < it1->second.size(); i++) {
             if (i == it1->second.size() - 1) {
                 cout << it1->second[i];
-            }
-			else {
+            } else {
                 cout << it1->second[i] << ',';
-			}
+            }
         }
         cout << '}' << endl;
     }

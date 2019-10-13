@@ -1,6 +1,7 @@
 #include "postfix.h"
 
-void CreatePrior() {
+void CreatePrior()
+{
     prior["+"] = 10;
     prior["-"] = 10;
     prior["*"] = 20;
@@ -14,11 +15,10 @@ void CreatePrior() {
     prior["!"] = 40;
 }
 
-
-void CreatePostfixFromTokens(tokens &texpr, tokens &pexpr) {
-	
+void CreatePostfixFromTokens(tokens& texpr, tokens& pexpr)
+{
     CreatePrior();
-    stack <token> TStack;
+    stack<token> TStack;
     for (size_t i = 0; i < texpr.size(); i++) {
         switch (texpr[i].type) {
         case var:
@@ -52,9 +52,11 @@ void CreatePostfixFromTokens(tokens &texpr, tokens &pexpr) {
 
         case op:
             if (TStack.size()) {
-                while (TStack.size() && ((TStack.top().type == op && prior[texpr[i].name] <= prior[TStack.top().name]) ||
-                    TStack.top().type == func ||
-                    TStack.top().type == mas)) {
+                while (TStack.size()
+                       && ((TStack.top().type == op
+                            && prior[texpr[i].name] <= prior[TStack.top().name])
+                           || TStack.top().type == func
+                           || TStack.top().type == mas)) {
                     pexpr.push_back(TStack.top());
                     TStack.pop();
                 }
@@ -74,7 +76,7 @@ void CreatePostfixFromTokens(tokens &texpr, tokens &pexpr) {
             while (TStack.size() && TStack.top().type == func) {
                 pexpr.push_back(TStack.top());
                 TStack.pop();
-			}
+            }
             TStack.push(texpr[i]);
             break;
         }
