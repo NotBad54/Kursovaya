@@ -8,7 +8,7 @@
 
 using namespace std;
 
-double fact(double n);
+long long int fact(int n);
 double op_plus(stack <double> &s);
 double op_minus(stack <double> &s);
 double op_mul(stack <double> &s);

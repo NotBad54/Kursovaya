@@ -10,7 +10,6 @@ void ReadExpressionFromStream(ifstream &inp, string &expr, Variables &var, Massi
 	getline(inp, expr);
 	string temp;
 	int pos;
-
 	while (!inp.eof()) {
 		getline(inp, temp);
 	
