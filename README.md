@@ -8,3 +8,4 @@ Able to recognize and calculate such operations:
 - sine, cosine, tangent, arcsine, arccosine, arctangent;
 
 In addition, there is support for variables and arrays
+[![Build Status](https://travis-ci.org/KepocuH/Kursovaya.svg?branch=master)](https://travis-ci.org/KepocuH/Kursovaya)
