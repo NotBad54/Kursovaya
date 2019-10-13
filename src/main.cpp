@@ -22,8 +22,9 @@ int main()
 
     Variables::iterator it;
     for (it = expvars.begin(); it != expvars.end(); it++)
+    {
         cout << it->first << '=' << it->second << endl;
-
+    }
     Massives::iterator it1;
     for (it1 = expmasvars.begin(); it1 != expmasvars.end(); it1++) 
     {
