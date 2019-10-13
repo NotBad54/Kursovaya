@@ -4,6 +4,8 @@ language:
 
 compiler: g++
 
+sudo: false
+
 
 dist: xenial
 
