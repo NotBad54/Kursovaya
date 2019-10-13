@@ -10,4 +10,4 @@ script:
 - sudo apt-get install -y cxxtest
 - make
 - make test
-- git ls-files src/ | xargs clang-format -i && git diff —exit-code
+- git ls-files src/ | xargs clang-format -i && git diff --exit-code
