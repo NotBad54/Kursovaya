@@ -81,7 +81,8 @@ void CreateTokensFromExpression(string &expr, tokens &texpr) {
         if (texpr[j].name == "-" && (j == 0 || texpr[j - 1].type == op_br)) {
             texpr[j].name = "opposite";
         }
-        if (texpr[j].name == "!" && (j == texpr.size() - 1 || texpr[j + 1].type == cl_br || texpr[j + 1].type == op)) {
+        if (texpr[j].name == "!" && (j == texpr.size() - 1
+                || texpr[j + 1].type == cl_br || texpr[j + 1].type == op)) {
             texpr[j].name = "factorial";
         }
     }

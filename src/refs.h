@@ -3,8 +3,6 @@
 #define _REFS_H
 #include "stdafx.h"
 
-
-
 using namespace std;
 
 typedef map<string, double> Variables;

@@ -62,10 +62,11 @@ s.pop();
 
 Massives::iterator it; 
 for (it = varmas.begin(); it != varmas.end(); it++) { 
-if (it->first == pexpr[i].name) 
-s.push(it->second[index]); 
-} 
-} 
+if (it->first == pexpr[i].name) {
+    s.push(it->second[index]); 
+}
+}
+}
 default: break;
 }
 }
