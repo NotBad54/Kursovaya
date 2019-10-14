@@ -10,7 +10,7 @@ tokens texpr, pexpr;
 Variables expvars;
 Massives expmasvars;
 string expr;
-ifstream file("../Kursovaya/test/test.h");
+ifstream file("../Kursovaya/test.txt");
 
 int main()
 {
