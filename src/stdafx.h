@@ -1,0 +1,12 @@
+#pragma once
+#include <algorithm>
+#include <cctype>
+#include <cmath>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <map>
+#include <set>
+#include <stack>
+#include <string>
+#include <vector>
